@@ -950,7 +950,6 @@ label #cancel{
 @media screen and (max-width: 550px){
 
 	.main-img{
-		transform: scale(0.7);
 		right: -30px;
 	}
 

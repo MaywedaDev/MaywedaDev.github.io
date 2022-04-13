@@ -697,8 +697,7 @@ body{
 
 label #btn,label #cancel{
 	font-size: 1.5em;
-	right: 0;
-	top: 0;
+	top: -5px;
 	z-index: 1111;
 	display: none;
 	cursor: pointer;
@@ -936,6 +935,7 @@ label #cancel{
 
 	.slider{
 		margin: 20px auto;
+		top: 0px !important;
 	}
 
 	.footer .content{
@@ -970,7 +970,6 @@ label #cancel{
 	}
 
 	.main-img{
-		transform: scale(0.6);
 		right: -50px;
 		bottom: 0;
 	}

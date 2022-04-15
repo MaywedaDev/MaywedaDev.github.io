@@ -1,0 +1,199 @@
+@font-face{
+	font-family: "Poppins";
+	src: url("../assets/fonts/Poppins-Regular.ttf");
+}
+
+@font-face{
+	font-family: "BungeeShade-Regular";
+	src: url('../assets/fonts/BungeeShade-Regular.ttf');
+}
+@font-face{
+	font-family: "OverlockSC";
+	src: url('../assets/fonts/OverlockSC-Regular.ttf');
+} 
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html{
+	font-size: 18px;
+}
+
+body{
+	min-width: 100vw;
+	background: #5886FF;
+}
+
+.logo{
+	padding: 20px 10px;
+	font-family: "BungeeShade-Regular",sans-serif;
+	color: #fff;
+}
+
+.logo span{
+	font-family: "OverlockSC",sans-serif;
+}
+
+
+
+h1{
+	color: #f5f5f5;
+	font-family: "Poppins", sans-serif;
+	text-align: center;
+	margin: 100px 0 50px 0;
+	text-transform: capitalize; 
+	text-decoration: underline;
+	text-shadow: 2px 2px 4px #000;
+}
+
+.taskbar{
+	width: 550px;
+	padding: 50px 30px;
+	background:  #e0e0e0;
+	border-radius: 30px;
+	margin: 20% auto 50px auto;
+	box-shadow:  6px -6px 18px #000,
+             -6px 6px 12px #ffffff;
+}
+
+#alltasks{
+	border: 2px solid #5886FF;
+	padding: 20px;
+	border-radius: 20px;
+}
+
+input[type="text"]{
+	width: 80%;
+	height: 60px;
+	padding: 5px;
+	border-radius: 20px;
+	border: 2px solid #d1d3d4;
+	background-color: #e0e0e0;
+	box-shadow:  6px -6px 8px #9d9d9d,
+             -6px 6px 8px #ffffff;
+    font-family: "Poppins", sans-serif;
+}
+
+input[type="text"]:focus{
+	outline: none;
+	border: 2px solid #5886FF;
+}
+
+#add{
+	background-color: #fc7f03;
+	padding: 18px 12px;
+	border-radius: 20px;
+	border: 2px solid #c35817;
+	box-shadow:  6px -6px 8px #9d9d9d,
+             -6px 6px 8px #ffffff;
+    font-family: "Poppins", sans-serif;
+    cursor: pointer;
+}
+
+#tasks{
+	margin-top: 30px;
+}
+
+.task{
+	list-style: none;
+	padding: 10px 20px;
+	border: 2px solid #d1d3d4;
+	background-color: #e0e0e0;
+	box-shadow:  6px -6px 8px #9d9d9d,
+             -6px 6px 8px #ffffff;
+	margin-bottom: 20px;
+	border-radius: 18px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.content{
+	border: 2px solid #c35817;
+	padding: 10px;
+	border-radius: 12px;
+	width: 70%;
+	font-family: "Poppins", sans-serif;
+	font-weight: bold;
+}
+
+.content:first-letter{
+	text-transform: uppercase;
+}
+
+.delete{
+	background: #5886FF;
+	border: 2px solid #1034a6;	
+}
+
+.done{
+	background: #ff2e2e;
+	border: 2px solid #960018;
+}
+
+.done,.delete{
+	padding: 0 10px;
+	border-radius: 10px;
+	color: white;
+	height: 40px;
+	cursor: pointer;
+}
+
+.line{
+	text-decoration: line-through;
+}
+
+.count{
+	margin-top: 10px;
+	font-family: "Poppins",sans-serif;
+	font-weight: bold;
+	padding-left: 20px;
+	color: #c35817;
+	text-shadow: 2px 2px 4px #000;
+	font-size: 0.8rem;
+}
+
+#alltasks div{
+	display: flex;
+	justify-content: space-between;
+}
+
+.owner{
+	padding: 30px 20px;
+	background-color: #fff;
+	margin-top: 30px;
+}
+
+.owner h1{
+	margin: 20px 0;
+	font-size: 1.5em; 
+	text-align: left;
+}
+
+.owner p{
+	font-family: "Poppins",sans-serif;
+	font-weight: bold;
+	text-align: right;
+}
+
+.owner p span{
+	font-size: 0.8em;
+} 
+
+@media screen and (max-width: 550px){
+	.taskbar{
+	width: 100%;
+	}
+
+	html{
+		font-size: 16px;
+	}
+}
+
+@media screen and (max-width: 400px){
+	#add{
+	padding: 15px 10px;
+	}
+}

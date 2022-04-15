@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Gamestore-Products</title>
+
+	<link rel="stylesheet" type="text/css" href="Products.css">
+
+	<link rel="icon" type="image" href="">
+
+	<meta charset="utf-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<script type="text/javascript" src="../Scripts/all.js"></script>
+
+</head>
+<body>
+
+	<div class="titlebar">
+		<h1 class="logo"><i class="fa-solid fa-screwdriver-wrench"></i>Mayweda<span>-</span><span>Dev</span></h1>
+		<h1><i class="fa-solid fa-store"></i>GameStore</h1>
+
+		<a href="">Home <i class="fa-solid fa-circle-chevron-right"></i></a>
+	</div>
+
+	<input type="checkbox" id="check">
+	<label for="check">
+		<div id="btn"><i class="fa-solid fa-bars"></i></div>
+		<div id="cancel"><i class="fa-solid fa-cancel" ></i></div>
+	</label>
+
+	<div class="sidebar">
+
+		
+
+		<h1 class="text">Our Games</h1>
+		<ul>
+			<li><a href=""><i class="fa-brands fa-steam"></i> <span class="text">PC Games</span></a></li>
+			<li><a href=""><i class="fa-solid fa-mobile"></i> <span class="text">Mobile Games</span></a></li>
+			<li><a href=""><i class="fa-solid fa-gamepad"></i> <span class="text">Console Games</span></a></li>
+			<li><a href=""><i class="fa-brands fa-xbox"></i> <span class="text">Consoles</span></a></li>
+			<li><a href=""><i class="fa-solid fa-chess-board"></i> <span class="text">Board Games</span></a></li>
+			<li><a href=""><i class="fa-solid fa-diamond"></i> <span class="text">Card Games</span></a></li>
+			<li><a href=""><i class="fa-brands fa-twitch"></i><span class="text"> Others</span></a></li>
+
+		</ul>
+	</div>
+
+	<div class="mainpage">
+		
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua.</p>
+
+
+	</div>
+
+
+	<div class="gamepage">
+		
+		<h1>Our Most Popular Games</h1>
+
+		<div class="slider">
+			<div class="slides">
+				<input type="radio" name="radio-btn" id="radio1">
+				<input type="radio" name="radio-btn" id="radio2">
+				<input type="radio" name="radio-btn" id="radio3">
+				<input type="radio" name="radio-btn" id="radio4">
+
+				<div class="sldimg first">
+					<div class="sldtxt">
+						<h3>Genshin Impact</h3>
+						<h4>#1 Open World adventure game</h4>
+					</div>
+					<img src="images/amber_bennett_eula_timmie_snowman_hd_genshin_impact-1920x1080.jpg">
+				</div>
+
+				<div class="sldimg">
+					<div class="sldtxt">
+						<h3>Halo 5</h3>
+						<h4> Best Sci-fi game this week</h4>
+					</div>
+					<img src="images/cortana_master_chief_4k_5k_hd_halo_5_guardians-2560x1440.jpg">
+				</div>
+
+				<div class="sldimg">
+					<div class="sldtxt">
+						<h3>Forza 5</h3>
+						<h4> #1 Video game of 2022</h4>
+					</div>
+					<img src="images/ford_transit_supervan_3_lamborghini_aventador_lp700_4_mclaren_720s_spider_4k_hd_forza_horizon_5-2560x1440.jpg">
+				</div>
+
+				<div class="sldimg">
+					<div class="sldtxt">
+						<h3>Fortnite</h3>
+						<h4> Most popular Battle Royalle</h4>
+					</div>
+					<img src="images/fortnite_season_10_loading_screen_hd_fortnite-1920x1080.jpg">
+				</div>
+
+
+				<div class="nav-auto">
+					<div class="aut-btn1"></div>
+					<div class="aut-btn2"></div>
+					<div class="aut-btn3"></div>
+					<div class="aut-btn4"></div>
+				</div>
+
+				</div>
+			
+			<div class="nav-manual">
+					
+					<label for="radio1" class="manual-btn"></label>
+					<label for="radio2" class="manual-btn"></label>
+					<label for="radio3" class="manual-btn"></label>
+					<label for="radio4" class="manual-btn"></label>
+				</div>
+
+		</div>
+
+		<form class="search-box">
+					<input type="text" name="" placeholder="Search for games" id="search">
+					<label for="search"><button><i class="fa-solid fa-magnifying-glass"></i></button></label>
+		</form>
+		<div class="gamegrid">
+  
+
+
+		</div>
+
+
+	</div>
+
+	<div class="footer">
+	
+		<ul>
+			<h3>Projects</h3>
+			<li><a href="">Index</a></li>
+			<li><a href="">Football Zone</a></li>
+			<li><a href="">Login Page</a></li>
+			<li><a href="">Script</a></li>
+			<li><a href="">Task</a></li>
+		</ul>
+
+		<ul>
+			<h3>Made use of</h3>
+			<li><a href="">Font Awesome Fonts</a></li>
+			<li><a href="">Google Fonts</a></li>
+			<li><a href="">Online Tutorials</a></li>
+		</ul>
+
+		<p><i class="fa-solid fa-screwdriver-wrench"></i> Mayweda-DEV@2022</p>	
+	</div>
+
+	<script type="text/javascript">
+		var counter = 1;
+		setInterval(function(){
+			document.getElementById("radio" + counter).checked = true;
+			counter++;
+			if (counter > 4) {
+				counter = 1;
+
+			}
+		},5000);
+
+
+
+			
+		
+	</script> 
+
+	<script type="text/javascript" src="products.js"></script>
+</body>
+</html>

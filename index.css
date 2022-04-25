@@ -726,6 +726,65 @@ label #cancel{
 	position: fixed;
 }
 
+.faq h2{
+	font-family: "NunitoSans",sans-serif;
+	margin-left: 60px;
+	font-size: 1.8em; 
+}
+
+.accordion{
+	width: 90%;
+	margin: 50px auto;
+	font-family: "Poppins",sans-serif;
+}
+
+.accordion li{
+	margin: 0 auto;
+	width: 65%;
+	border-bottom: 1px solid var(--link-text);
+	padding: 4px 10px;
+	overflow: hidden;
+}
+
+.accordion li h4{
+	width: 100%;
+	position: relative;
+	margin: 15px 0;
+}
+
+.accordion li h4::before{
+	content: '+';
+	position: absolute;
+	right: 40px;
+	font-size: 1.5em;
+	transform: translateY(-20%);
+}
+
+.accordion li .contentBx {
+	width: 100%;
+	overflow: hidden;
+	max-height: 0;
+	transition: max-height 0.7s ease-in-out;
+	
+}
+
+.accordion li .contentBx p{
+	margin: 20px 0;
+	padding: 4px 8px;
+}
+
+.accordion li.active h4::before{
+	content: '-';
+}
+
+.accordion li.active .contentBx {
+	transition: max-height 0.7s ease-in-out;
+}
+
+
+.accordion li.active .contentBx p{
+}
+
 @media screen and (max-width: 900px){
 
 	 .navbar ul {
@@ -950,6 +1009,7 @@ label #cancel{
 @media screen and (max-width: 550px){
 
 	.main-img{
+		transform: scale(0.7);
 		right: -30px;
 	}
 

@@ -14,7 +14,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<script type="text/javascript" src="Scripts/all.js"></script>
-	
+	<script type="text/javascript" src="Scripts/regular.js"></script>
+	<script type="text/javascript" src="Scripts/solid.js"></script>
+	<script type="text/javascript" src="Scripts/brands.js"></script>
 </head>
 
 <body>
@@ -61,7 +63,7 @@
 				<button>Get Started <i class="fa-solid fa-arrow-down"></i></button>
 			</div>
 			<div class="main-img">
-				<img src="assets/1_pngfind.com-man-with-laptop-png-6668342.png">
+				<img src="assets/pngfind.com-man-with-laptop-png-6668342.png">
 			</div>
 		</div>
 
@@ -172,7 +174,7 @@
 					<div class="imgbox">
 						<img src="assets/1_Gamestore.png">
 					</div>
-					<a href="Products/products.html">Products</a>
+					<a href="">Products</a>
 				</div>
 				<div class="pjt-box item2">
 					<div class="imgbox">
@@ -181,10 +183,8 @@
 					<a href="">Sports Extravagansa</a>
 				</div>
 				<div class="pjt-box item3">
-					<div class="imgbox">
-						<img src="assets/Todolist.PNG">
-					</div>
-					<a href="To-do-list/Lists.html">Todolist</a>
+					<div class="imgbox"></div>
+					<a href="">*Coming Soon*</a>
 				</div>
 				<div class="pjt-box item4">
 					<div class="imgbox"></div>
@@ -197,6 +197,36 @@
 					
 			</div>
 		</div>
+
+		<div class="faq">
+			<h2>FAQs</h2>
+			<div>
+				<ul class="accordion">
+					<li class="item_header">
+						<h4>How do I order</h4>
+						<div class="contentBx"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p></div>
+					</li>
+					<li class="item_header">
+						<h4>When do I order</h4>
+						<div class="contentBx"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p></div>
+					</li>
+					<li class="item_header">
+						<h4>Where do I order</h4>
+						<div class="contentBx"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p></div>
+					</li>
+					<li class="item_header">
+						<h4>What do I order</h4>
+						<div class="contentBx"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p><div>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+
 		<div class="footer">
 
 			<h2 class="logo"><i class="fa-solid fa-screwdriver-wrench"></i> Mayweda<span>-</span><span>Dev</span></h2>
@@ -253,7 +283,7 @@
 							<li><a href="">Email Us</a></li>
 							<li><a href="">Contact</a></li>
 							<li><a href="">Website Terms</a></li>
-							<li><a href="">Who owns MD</a></li>
+							<li><a href="">Who owns MD?</a></li>
 						</ul>
 					</div>
 				</div>
@@ -273,6 +303,46 @@
 			}
 		},7000);
 
+		const accordionBtns = document.querySelectorAll('.item_header');
+		console.log(accordionBtns.length)
+		const box = document.querySelectorAll('.contentBx');
+
+
+		/*accordionBtns.forEach((li, i) => {
+
+			const box = document.querySelectorAll('.contentBx');
+
+			li.addEventListener('click', () => {
+				li.classList.toggle('active');
+
+				if (li.classList.contains('active')){
+					box[i].style.maxHeight = box.scrollHeight + 'px';
+				}
+
+				else {
+					box[i].style.maxHeight = 0;
+				}
+			})
+	
+			
+		})*/
+
+		function open(i){
+			accordionBtns[i].classList.toggle('active');
+			if (accordionBtns[i].classList.contains('active')){
+					box[i].style.maxHeight = box[i].scrollHeight + 'px';
+			}
+
+			else {
+					box[i].style.maxHeight = 0;
+				}
+		}
+
+		for (let k=0; k < accordionBtns.length; k++){
+			accordionBtns[k].addEventListener('click', () => {
+	 		open(k);
+	 	})
+		}
 
 		</script> 
 		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>

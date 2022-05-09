@@ -62,6 +62,7 @@ body{
 	height:100%;
 	border-radius: 0 0 5% 5%;
 	transition: all 0.5s ease-in-out;
+	margin-top: 50px;
 }
 
  .mainpage p{
@@ -97,7 +98,7 @@ body{
 }
 
 .titlebar{
-	background:transparent;
+	background-image: linear-gradient( to bottom , #172948 20%, #042331 55%, #172948 110%);
 	filter: saturate(120%);
 	display: flex;
 	align-items: center;
@@ -114,7 +115,7 @@ body{
 	display: inline-block;
 	font-size: 1.5rem;
 	margin: 2px 65px;
-	color: #f5f5f5;
+	color: #E26434;
 	font-family: "BungeeShade-Regular", sans-serif;
 	text-shadow: 2px 3px 3px #042331;
 
@@ -123,7 +124,7 @@ body{
 
 
 .titlebar h1:nth-child(2){
-	color: #042331;
+	color: #E26434;
 	margin-left: -270px;
 	font-family: "OverlockSC", monospace;
 	text-shadow: 2px 3px 3px #042331;
@@ -131,7 +132,7 @@ body{
 }
 
 .titlebar a{
-	color: #042331;
+	color: #E26434;
 	text-decoration: none;
 	font-size: 1em;
 	font-family: "Poppins", sans-serif;
@@ -144,7 +145,6 @@ body{
 }
 
 .logo span{
-	color: #042331;
 	font-family: "OverlockSC", monospace;
 	font-size: 1em;
 	
@@ -164,7 +164,7 @@ body{
 
 label #btn,label #cancel{
 	position: fixed;
-	z-index: 4;
+	z-index: 5;
 	color: #f5f5f5;
 	background-color: #042331;
 }
@@ -202,6 +202,7 @@ label #cancel:hover{
 }
 #check:checked ~ .sidebar{
 	width: 250px;
+	z-index: 4;
 }
 
 #check:checked ~ label #btn{

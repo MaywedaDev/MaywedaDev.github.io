@@ -46,6 +46,10 @@
 	font-weight: bold;
 }
 
+.skills .type{
+	font-size: 1.5em;
+}
+
 #skills{
 	display: flex;
 	justify-content: space-around;
@@ -99,6 +103,32 @@ li progress[value]::-webkit-progress-value{
 	filter: saturate(250%);
 	box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7) inset;
 }
+
+.socials li{
+	list-style: none;
+}
+
+.socials a{
+	text-decoration: none;
+	font-family: "NunitoSans",sans-serif;
+	color: var(--primary);
+	font-size: 2.5em;
+}
+
+.socials a:hover{
+	color: #3EA5E7; 
+}
+
+.socials h4{
+	color: var(--primary);
+	font-family: "NunitoSans",sans-serif;
+	font-size: 1.5em;
+}
+
+.socials div ul{
+	display: flex;
+}
+ 
 
 	
 

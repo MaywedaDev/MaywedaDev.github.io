@@ -216,7 +216,7 @@ body{
 
 .main h1,.main h2{
 	margin: 25px 0;	
-	font-family: "NunitoSans",monospace;
+	font-family: "NunitoSans",sans-serif;
 	text-shadow: 1px 2px 5px #000;
 }
 
@@ -559,7 +559,6 @@ body{
 	background-color: var(--primary);
 	border-top: 1px solid var(--link-text);
 	margin: 0 30px;
-	box-sizing: padding-box;
 	position: relative; 
 }
 
@@ -785,6 +784,156 @@ label #cancel{
 .accordion li.active .contentBx p{
 }
 
+
+.contact{
+	margin-top: 50px;
+	display: flex;
+	justify-content: space-around;
+	background-color: var(--link-text);
+	padding: 50px 0;
+	position: relative;
+}
+
+.contact::before{
+	width: 90%;
+	position: absolute;
+	content: '';
+	background: var(--primary);
+	bottom: 0;
+	left: 5%;
+	height: 1px;
+}
+
+.contact h1{
+	max-width: 40%;
+	color: var(--secondary);
+	font-family: "NunitoSans",sans-serif;
+}
+
+.contact input[type="text"], ._info input{
+	border: none;
+	border-bottom: 2px solid var(--primary);
+	background: none;
+	height: 35px;
+	color: var(--secondary);
+}
+
+.contact form{
+	min-width: 50%;
+	margin-top: 20px;
+}
+
+.contact form .item1, .item2, ._info{
+	margin-top: 20px;
+}
+
+input.txt-inpt{
+	width: 100%;
+}
+
+input:focus{
+	outline: none;
+}
+
+.radios, .radios label{
+	display: flex;
+}
+
+.radios{
+	width: 100%;
+	justify-content: space-around;
+}
+
+.radios label{
+	align-items: center;
+	color: grey;
+	font-size: 0.8em; 
+}
+
+
+._info{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	column-gap: 10%;
+	grid-row-gap: 20px;
+}
+
+._info div{
+	display: flex;
+	flex-direction: column;
+}
+
+._info input::placeholder{
+	font-size: 1.2em;
+}
+
+h6, .radios label{
+	font-family: "NunitoSans", sans-serif;
+	font-weight: lighter;
+}
+
+h6{
+	color: var(--secondary);
+}
+
+.radios label:focus-within{
+	color: var(--secondary);
+}
+
+.contact [id^="bton"]{
+	appearance: none;
+	background-color: var(--link-text);
+	margin: 0;
+	font: inherit;
+	color: var(--primary);
+	width: 1.0em;
+	height: 1.0em;
+	border: 0.15em solid var(--primary);
+	border-radius: 50%;
+	display: grid;
+	place-content: center;
+	margin-right: 4px; 
+}
+
+.contact [id^="bton"]::before{
+	content: "";
+	width: 0.45em;
+	height: 0.45em;
+	border-radius: 50%;
+	transform: scale(0);
+	transition: 120ms transform ease-in-out;
+	box-shadow: inset 1em 1em var(--secondary);
+}
+
+.contact [id^="bton"]:checked::before{
+	transform: scale(1);
+}
+
+.contact #bton:focus{
+	outline: max(2px, 0.15em) solid #000;
+	outline-offset: max(2px, 0.15em);
+}
+
+.fa-arrow-up{
+	transform: rotate(45deg);
+}
+
+form button{
+	background-color: transparent;
+	border: none;
+	border-bottom: 2px solid var(--secondary);
+	padding: 5px 0px;
+	color: var(--secondary);
+	margin-top: 20px;
+}
+
+form button:hover{
+	background-color: var(--primary);
+	color: var(--link-text);
+	transition: all 0.4s ease;
+}
+
+
 @media screen and (max-width: 900px){
 
 	 .navbar ul {
@@ -920,6 +1069,14 @@ label #cancel{
 		justify-content: space-between;
 	}
 
+	.contact h1{
+		max-width: 30%;
+	}
+
+	.contact form{
+		min-width: 60%;
+	}
+
 }
 
 @media screen and (max-width: 800px){
@@ -1004,6 +1161,19 @@ label #cancel{
 	.footer .links{
 		flex-wrap: wrap;
 	}
+
+	.contact{
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.contact form{
+		width: 80%;
+	}
+
+	.contact h1{
+		max-width: 70%;
+	}
 }
 
 @media screen and (max-width: 550px){
@@ -1019,6 +1189,20 @@ label #cancel{
 
 	.about .stats h2,.about .stats h3{
 		white-space: nowrap;
+	}
+
+	.radios{
+		flex-direction: column;
+	}
+
+	.radios label{
+		margin-bottom: 10px;
+	}
+
+	._info{
+		display: flex;
+		flex-wrap: wrap;
+
 	}
 }
 

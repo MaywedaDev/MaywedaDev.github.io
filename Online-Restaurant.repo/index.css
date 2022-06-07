@@ -1,4 +1,4 @@
-:root{
+﻿:root{
 	--primary: linear-gradient( to right, #3A0308, #FF0117);
 	--secondary: #D4D6B6;
 	--secondary-alt: #EB6425;
@@ -36,7 +36,7 @@ nav ul{
 
 
 a.nav-link{
-	color: var(--text-color) !important;
+	color: var(--text-color);
 	font-size: 0.9em;
 	font-weight: 500;
 	position: relative;
@@ -290,13 +290,40 @@ ul.dropdown-menu{
 		position: absolute;
 		right: 0;
 		top: 0;
-		max-width: 350px;
+		max-width: 200px;
 		width: 100%;
-		transform: translateX(350px);
+		transform: translateX(200px);
 		background-color: var(--text-color-alt);
-		line-height: 15vh;
+		line-height: 20px;
 		height: 100vh;
 		z-index: 3;
+		padding-top: 80px;
+	}
+
+	nav ul::before{
+		content: 'ALYCE';
+		top: 40px;
+		font-size: 20px;
+	}
+
+	nav ul::before, nav ul::after{
+		position: absolute;
+		left: 20px;
+		color: var(--color);
+		font-weight: bold;
+	}
+
+	nav ul::after{
+		top: 85%;
+		content: '©Mayweda-Dev';
+		font-size: 10px;
+		opacity: 80%;
+	}
+
+	a.nav-link{
+		color: var(--color);
+		padding-left: 20px;
+		font-weight: bold;
 	}
 
 	.togglebar{

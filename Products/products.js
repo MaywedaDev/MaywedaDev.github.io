@@ -38,7 +38,7 @@ const gamegrid = document.querySelector('.gamegrid');
 
 
 
- for (var i = 0; i <= games.length - 1; i++) {
+ for (let i = 0; i <= games.length - 1; i++) {
  	gamegrid.innerHTML += `
  	<div class="item">
 				<div class="imgbox"><img src="${games[i].src}">
@@ -58,6 +58,77 @@ const gamegrid = document.querySelector('.gamegrid');
 console.log(games.length);
 
 
+const game1 = [
+		"images/orsrc60869-1.jpg",
+		'images/embrace_the_chaos_moon_knight_hd_fortnite-1280x720.jpg',
+		'images/fortnite_save_the_world_hd_fortnite-1280x720.jpg',
+		'images/rave_cave_fortnite_hd_fortnite-1280x720.jpg',
+		'images/sunbird_moon_hawk_the_temple_northeast_of_daily_bugle_kyle_logjam_lumberyard_the_visitor___launchpad_hd_fortnite-1280x720.jpg'
+]
+
+const game2 = [
+		'images/8067189.jpg',
+		'images/aston_martin_vulcan_amr_pro_hd_forza_horizon_4-1280x720.jpg',
+		'images/senkoe_hd_forza_horizon_5-1280x720.jpg',
+		'images/ktm_lamborghini_land_rover_lola_lotus_maserati_mercedes_amg_mercedes_benz_meyers_mitsubishi_morgan_4k_hd_forza_horizon_5-1280x720.jpg',
+		'images/ford_transit_supervan_3_lamborghini_aventador_lp700_4_mclaren_720s_spider_4k_hd_forza_horizon_5-2560x1440.jpg'
+]
+
+const displayGame = [ game1, game2]
+//console.log(mainImgs)
+
+const mainImg = document.querySelector('.main-img img');
+const altImgs = document.querySelectorAll('.alt-imgs img');
+console.log(altImgs)
+//console.log(mainImg)
+
+const altImg = [...altImgs];
+console.log(altImg);
+
+altImg.forEach((el, i) => {
+		el.onclick = () =>{
+			changeInfo(i);
+			mainImgs = displayGame[i]
+		}
+});
+var x = 0
+//console.log(mainImgs[x])
+
+const displayInfo = [
+	{name: "Fortnite", rating: '8.5', price: '$15.00', platforms: all, genre: ['Shooter', 'Action']},
+	{name: "Forza Horizon 5", rating: '8.9', price: '$25.00', platforms: xboxExclusives, genre: ['Racing', 'Arcade']}
+]
+
+function changeInfo(i){
+ const name = document.querySelector('#name h1');
+ const genre = document.querySelectorAll('#genre span');
+ const price = document.getElementById('price');
+ const rating = document.querySelector('#rating span');
+ const platform = document.getElementById('platform');
+
+ name.innerHTML = displayInfo[i].name;
+ price.innerHTML = displayInfo[i].price;
+ rating.innerHTML = displayInfo[i].rating;
+ platform.innerHTML = displayInfo[i].platforms;
+
+ for (let g = 0; g < genre.length; g++){
+ 	genre[g].innerHTML = displayInfo[i].genre[g];
+ } 
+}
+
+var mainImgs = displayGame[0];
+setInterval(function () {
+	mainImg.src = mainImgs[x]
+	if (x >= mainImgs.length - 1) {
+		x = 0
+	}
+	else {
+		x++
+	}
+}, 7000)
+
+
+//console.log(mainImg.src)
 
 
 console.log(gamegrid)				

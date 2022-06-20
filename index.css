@@ -68,7 +68,7 @@ body{
 	background-color: var(--link-text);
 }
 
-.active a{
+.navbar .active a{
 	padding: 4px 8px !important;
 	color: var(--secondary) !important;
 	background-color: var(--link-text);
@@ -152,7 +152,7 @@ body{
 }
 
 .navbar ul li:not(:last-child){
-	margin-right: 30px;
+	margin-right: 50px;
 }
 
 .navbar div{
@@ -161,23 +161,6 @@ body{
 	flex: 3;
 }
 
-#login{
-	display: inline-block;
-	margin-right: 25px;
-	padding: 4px 8px;
-	color: var(--secondary);
-	background-color: var(--link-text);
-	border: 2px solid var(--link-text);
-	border-radius: 20px;
-	color: var(--secondary);
-	background-color: var(--link-text);
-}
-
-#login:hover{
-	color:  var(--link-text);
-	background-color:  var(--secondary);
-	border-color: var(--link-text);
-}
 
 .main{
 	max-width: 100%;
@@ -232,8 +215,8 @@ body{
 
 .main-img{
 	position: absolute;
-	right: 60px;
-	bottom: 30px;
+	right: 0px;
+	bottom: 0px;
 }
 
 .main img{
@@ -559,6 +542,7 @@ body{
 	border: 3px solid var(--link-text);
 	border-radius: 5px;
 	padding: 5px;
+	position: relative;
 }
 
 .projects .imgbox img{
@@ -587,6 +571,30 @@ body{
 						 ". item3 ." 
 						 "item4 . item5" ;
 	margin: 20px auto 20px auto;
+}
+
+.projects .imgbox p{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background-color: #000;
+	color: var(--primary);
+	font-family: "Poppins",sans-serif;
+	font-weight: bold;
+	font-size: 1.2em;
+	top: 0;
+	left: 0;
+	padding: 10px 15px;
+	display: flex;
+	opacity: 0;
+	align-items: center;
+	justify-content: center;
+	transition: all 0.5s linear;
+	transition-delay: 1s;
+}
+
+.projects .imgbox:hover p{
+	opacity: 70%;
 }
 
 .item1{
@@ -1009,16 +1017,16 @@ form button:hover{
 	margin-right: 15px;
 	}
 
-	.active a{
+	.navbar .active a{
 	color: var(--link-text) !important;
 	background-color: transparent !important;
 	}
 
-	.active a:hover{
+	.navbar .active a:hover{
 		border: none !important;
 	}
 
-	.active{
+	.navbar .active{
 		background-color: var(--secondary);
 	}
 
@@ -1094,7 +1102,7 @@ form button:hover{
 
 	.main-img{
 		transform: scale(0.8);
-		right: 20px;
+		bottom: -20px;
 	}
 
 	html{
@@ -1167,6 +1175,7 @@ form button:hover{
 	.main-img{
 		transform: scale(0.7);
 		right: -30px;
+		bottom: -40px;
 	}
 
 	.about .stats{
@@ -1200,7 +1209,6 @@ form button:hover{
 
 	.main-img{
 		right: -50px;
-		bottom: 0;
 	}
 
 }

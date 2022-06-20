@@ -82,28 +82,6 @@ dd{
 	margin-top: 100px;
 }
 
-li progress[value]{
-	-webkit-appearance: none;
-	appearance: none;
-	width: 200px;
-	height: 35px;
-}
-
-li progress[value]::-webkit-progress-bar{
-	background-color: var(--link-text);
-	border-radius: 5px;
-	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5) inset;
-}
-
-li progress[value]::-webkit-progress-value{
-	background: linear-gradient(to right , var(--primary) 55%, var(--secondary) 110%);
-	background-repeat: no-repeat;
-	border-radius: 5px;
-	background-size: 100% 100%;
-	filter: saturate(250%);
-	box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7) inset;
-}
-
 .socials li{
 	list-style: none;
 }

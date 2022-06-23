@@ -152,7 +152,7 @@ body{
 }
 
 .navbar ul li:not(:last-child){
-	margin-right: 50px;
+	margin-right: 40px;
 }
 
 .navbar div{

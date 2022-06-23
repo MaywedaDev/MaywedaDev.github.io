@@ -89,6 +89,7 @@ altImg.forEach((el, i) => {
 		el.onclick = () =>{
 			changeInfo(i);
 			mainImgs = displayGame[i]
+			mainImg.src = mainImgs[0]
 		}
 });
 var x = 0

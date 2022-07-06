@@ -27,6 +27,23 @@
 	font-family: "NunitoSans",sans-serif;
 }
 
+
+.buttons button:first-child{
+	background-color: var(--link-text);
+}
+
+.buttons button a{
+	text-decoration: none;
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	color: currentColor;
+}
+
+.buttons button:first-child a{
+	color: var(--primary);
+}
+
 .buttons{
 	margin-left: 12%;
 	margin-top: 40px;
@@ -82,6 +99,28 @@ dd{
 	margin-top: 100px;
 }
 
+.about p{
+	max-width: 60%;
+}
+
+.summary{
+	display: flex;
+}
+
+.about .imgs{
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	min-width: 30%;
+	padding-right: 8%;
+	padding-top: 20px;
+}
+
+.about .imgs img{
+	width: 60px;
+	object-fit: scale-down;
+}
+
 .socials li{
 	list-style: none;
 }
@@ -93,7 +132,7 @@ dd{
 	font-size: 2.5em;
 }
 
-.socials a:hover{
+.socials a:hover, .wrks a:hover{
 	color: #3EA5E7; 
 }
 
@@ -106,7 +145,37 @@ dd{
 .socials div ul{
 	display: flex;
 }
+
+.wrks{
+	padding-left: 30px;
+}
+
+.wrks ul li{
+	list-style: none;
+}
+
+.wrks h6, .wrks span{
+	font-size: 0.6em;
+}
+
+.wrks a{
+	color: #fff;
+	text-decoration: none;
+}
+
+.wrks h6{
+	color: var(--primary);
+}
  
 
-	
+@media screen and (max-width: 768px){
+	.summary{
+		flex-direction: column;
+	}
+
+	.about p{
+	max-width: 100%;
+	}
+
+}	
 

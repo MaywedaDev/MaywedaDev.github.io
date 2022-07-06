@@ -79,11 +79,8 @@ const displayGame = [ game1, game2]
 
 const mainImg = document.querySelector('.main-img img');
 const altImgs = document.querySelectorAll('.alt-imgs img');
-console.log(altImgs)
-//console.log(mainImg)
 
 const altImg = [...altImgs];
-console.log(altImg);
 
 altImg.forEach((el, i) => {
 		el.onclick = () =>{
@@ -126,10 +123,29 @@ setInterval(function () {
 	else {
 		x++
 	}
-}, 7000)
+}, 7000);
+
+const themebtn = document.querySelector('#theme');
 
 
-//console.log(mainImg.src)
+const theme = localStorage.getItem('theme');
+const body = document.body;
+if (theme) {
+	body.classList.add(theme);
+}
 
 
-console.log(gamegrid)				
+themebtn.onclick = () => {
+	const themeIcon = document.querySelector('#theme .svg-inline--fa');
+	if (body.classList.contains('light')) {
+		body.classList.replace('light', 'dark');
+		themeIcon.classList.replace('fa-sun', 'fa-moon');
+		localStorage.setItem('theme', 'dark');
+	}
+	else {
+		body.classList.replace('dark', 'light');
+		themeIcon.classList.replace('fa-moon', 'fa-sun');
+		localStorage.setItem('theme', 'light');
+	}
+}
+

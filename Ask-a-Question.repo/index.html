@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<title>Ask A Question - Ultimate Answer Finder</title>
+	<script type="text/javascript" src="lib/jquery-3.6.0.js"></script>
+	<script type="text/javascript" src="lib/index.js"></script>
+</head>
+<body>
+		<div class="navbar">
+		<div>
+			<h1>Ask a ?</h1>
+		</div>
+			<ul>
+				<li class="li"><a href="#ball-form">Crystal-Ball</a></li>
+				<li class="li"><a href="#ai-form">Pick a Choice</a></li>
+				<li class="li"><a href="#typed2">Random Task</a></li>
+				<li class="li"><a href="#typed3">The Future</a></li>
+			</ul>
+			<div class="menuToggle"></div>
+		</div>
+		<div class="yes-no">
+			<h1>Ask your question</h1>
+			<div class="typing-text"><h2 id="typed1"></h2></div>
+			<div class="crystal-ball">
+				<div class="metal">
+			      <div class="clip-circle">
+			        <div class="cube-wrapper">
+			          <div class="cube-2">
+			            <div class="cube">
+			              <div id="face1" class="face"></div>
+			              <div id="face2" class="face"></div>
+			              <div id="face3" class="face"></div>
+			              <div id="face4" class="face"></div>
+			              <div id="face5" class="face"></div>
+			              <div id="face6" class="face"></div>
+			              <div id="face7" class="face"></div>
+			              <div id="face8" class="face"></div>
+			            </div>
+			          </div>
+			        </div>
+			      </div>
+			      <div class="circle reflection lighting"></div>
+			    </div>
+			</div>
+			<form id="ball-form">
+				<h4>Enter your question</h4>
+				<div class="input-group">
+					<input type="text" id="ipt-ball" placeholder="Ask the Crystal Ball....">
+					<button id="ask-ball">Ask</button>
+					<p class="Answer">
+						<span></span>
+					</p>
+				</div>
+			</form>
+		</div>
+
+		<div class="ai">
+			<h1>Let AI make your choice for you.</h1>
+			<h2>Separate the choices you want to make today with commas</h2>
+			<form id="ai-form">
+				<h4>Enter your choice for today</h4>
+				<div class="ai-loading">
+					<img src="assets/Images/441b310a69866315043b5f03bafb9c26.gif">
+				</div>
+				<div class="input-group">
+					<input type="text" placeholder="Enter your choices..." id="ai-ipt">
+					<button id="ai-btn">Pick</button>
+				</div>
+				<div class="choices"></div>	
+			</form>
+			<p class="ai-text"></p>
+		</div>
+
+		<div class="random">
+			<h1>Don't Know What to do today?</h1>
+			<div class="typing-text"><h2 id="typed2"></h2></div>
+			<button id="getTask">Get a task</button>
+			<div id="loading1">
+				<div class="progress"></div>
+			</div>
+			<p class="task"></p>
+		</div>
+
+		<div class="future">
+			<h1>Want to know what will happen to you in the nearest Future?</h1>
+			<div class="typing-text"><h2 id="typed3"></h2></div>
+			<button id="getFuture">Predict</button>
+			<div id="loading2">
+				<div class="progress"></div>
+			</div>
+			<p class="outcome"></p>
+		</div>
+
+		<div class="footer">
+			<div class="content">
+				<h4>AskAQuestion.com by Mayweda-Dev</h4>
+				<div class="links">
+					<ul>
+						<h3>Made Use of</h3>
+						<li>Typed.js by Matt Boldt</li>
+						<li>jQuery</li>
+						<li>StackOverflow</li>
+						<li>Ai Preloader Gif by Alex Olssen</li>
+						<li>Dribbble</li>
+						<li>PatternNinja</li>
+					</ul>
+					<ul>
+						<h3>You can contact me on</h3>
+						<li><a href="https://facebook.com/profile.php?id=100010444267704">FaceBook</a></li>
+						<li><a href="https://twitter.com/playermayweda7">Twitter</a></li>
+						<li><a>LinkedIn</a></li>
+						<li><a>Gmail</a></li>
+						<li><a href="https://github.com/MaywedaDev">Github</a></li>
+					</ul>
+					<ul>
+						<h3>Other Projects</h3>
+						<li><a>ALYCE</a></li>
+						<li><a>FootBall Fever</a></li>
+						<li><a>Portfolio</a></li>
+						<li><a>GameStore</a></li>
+					</ul>
+				</div>
+			</div>
+			
+			<div class="dis">
+				<h3>Disclaimer</h3>
+				<p>The developer of AskAQuestion.com is not resposible for any actions taken due to responses from this website. Stay Safe People</p>
+			</div>
+		</div>
+	
+<script type="text/javascript" src="lib/typed.js"></script>
+<script type="text/javascript">
+	let menuToggle = document.querySelector('.menuToggle');
+	let nav = document.querySelector('.navbar');
+	let li = document.querySelectorAll('.li');
+	menuToggle.onclick = () => {
+		nav.classList.toggle('active');
+		li.forEach((li) => {
+			li.classList.toggle('fadeRight');
+		})
+	}
+
+
+
+	var typed1 = new Typed('#typed1',{
+		strings: ['Ask a YES or NO Question', 'The Crystal ball Only answers straightforward questions', 'Your Question must be a PERSONAL Question', 'The Crystal Ball will Predict Your Future'],
+		typeSpeed: 100,
+		backSpeed: 100,
+		startDelay: 1000,
+		backDelay: 700,
+	});
+
+	var typed2 = new Typed('#typed2',{
+		strings: ['Let AI tell you what to do.', 'AI will Recommend a straightforward and easy task.', 'Do what AI tells you.', 'Have Fun &#128578;'],
+		typeSpeed: 100,
+		backSpeed: 100,
+		startDelay: 1000,
+		backDelay: 700,
+	})
+
+	var typed3 = new Typed('#typed3',{
+		strings: ['AI will predict an outcome of Yours.', 'AI has time-travelling code.', 'AI does not lie.', 'Trust AI &#128540;'],
+		typeSpeed: 100,
+		backSpeed: 100,
+		startDelay: 1000,
+		backDelay: 700,
+	})
+</script>
+<script type="text/javascript">
+	
+</script>
+</body>
+</html>
+
+
+
+
+

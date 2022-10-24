@@ -186,7 +186,7 @@ h1{
 #socials, #mail-me{
  	position: fixed;
  	bottom: 0;
- 	width: 20vh;
+ 	width: 15vw;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -233,8 +233,8 @@ h1{
 	max-width: 100%;
 	background: var(--primary);
 	padding: 3.5em 0;
-	margin-left: 20vh;
-	margin-right: 20vh;
+	margin-left: 15vw;
+	margin-right: 15vw;
 	position: relative;
 }
 
@@ -321,8 +321,8 @@ h1{
 }
 
 #about{
-	margin-left: 20vh;
-	margin-right: 20vh;
+	margin-left: 15vw;
+	margin-right: 15vw;
 	margin-top: 7em;
 }
 

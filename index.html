@@ -287,6 +287,9 @@ function toggleDark(){
 navtoggle.addEventListener('click', openNav);
 overlay.addEventListener('click', openNav);
 scheme.addEventListener('click', toggleDark);
+window.addEventListener('scroll', () => {
+	nav.classList.toggle('sticky', window.scrollY > 0)
+})
 </script>
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>

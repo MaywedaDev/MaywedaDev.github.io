@@ -89,6 +89,7 @@ h1{
 	width: 100%;
 	top: 0;
 	z-index: 1000;
+	transition: all 0.5s ease-out;
 }
 
 .navbar.sticky{
@@ -100,6 +101,10 @@ h1{
 
 body.dark .navbar.sticky{
 	background-color: rgba(31, 29, 43, 0.9);
+}
+
+.navbar.hide{
+	top: -80px;
 }
 
 .navbar .content{
@@ -538,6 +543,7 @@ body.dark .projects .featured .preview .imgbox::before{
 	display: flex;
 	gap: 20px;
 	flex-wrap: wrap;
+	position: relative;
 }
 
 .section-alt form .inputs, .section-alt form .contact{
@@ -587,6 +593,23 @@ body.dark .projects .featured .preview .imgbox::before{
     background: none;
     color: var(--primary);
 	padding: 5px 8px;
+}
+
+#send-btn{
+	position: absolute;
+	bottom: 20px;
+	margin: 0 auto;
+	border: 2px solid var(--primary);
+	color: var(--primary);
+	padding: 8px 12px;
+	background: transparent;
+	border-radius: 3px;
+	left: calc((100% - 145px) / 2);
+}
+
+#send-btn:hover{
+	background: var(--primary);
+	color: var(--secondary);
 }
 
 .wrks .projects{
@@ -893,6 +916,8 @@ body.dark .projects .featured .preview .imgbox::before{
 		width: 100%;
 		opacity: 80%;
 	}
+
+
 }
 
 @media screen and (max-width: 576px) {
@@ -908,5 +933,6 @@ body.dark .projects .featured .preview .imgbox::before{
 	.section-alt form{
 		width: 100%;
 		padding: 1.75em 1.25em;
+		padding-bottom: 3.5em;
 	}
 }

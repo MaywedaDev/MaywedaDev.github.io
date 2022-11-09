@@ -101,13 +101,13 @@
 									<p>Inspired by AllFootballApp, a football forum providing football data, live matches stats and football news on different players and countries, a webapp made with React. <span>Hosted on Github.</span></p>
 									<ul class="tools">
 										<li>React</li>
-										<li>Github Pages</li>
+										<li>Vercel</li>
 										<li>FireBase</li>
 										<li>CSS</li>
 									</ul>
 									<div class="source">
-										<a href="#"><i class="fa-brands fa-github"></i></a>
-										<a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+										<a href="http://allfootball-ehru.vercel.app"><i class="fa-brands fa-github"></i></a>
+										<a href="https://github.com/MaywedaDev/allfootball"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
 									</div>
 								</div>
 							</div>
@@ -232,6 +232,7 @@
 						<textarea name="" id="" cols="30" rows="10"></textarea>
 					</div>
 				</div>
+				<button id="send-btn">Send Message <i class="fa-solid fa-paper-plane"></i></button>
 			</form>
 		</div>
 		
@@ -284,11 +285,20 @@ function toggleDark(){
 	}
 }
 
+var lastScrollTop = 0;
+
 navtoggle.addEventListener('click', openNav);
 overlay.addEventListener('click', openNav);
 scheme.addEventListener('click', toggleDark);
 window.addEventListener('scroll', () => {
+	var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 	nav.classList.toggle('sticky', window.scrollY > 0)
+	if(scrollTop > lastScrollTop){
+		nav.classList.add('hide')
+	} else{
+		nav.classList.remove('hide')
+	}
+	lastScrollTop = scrollTop;
 })
 </script>
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>

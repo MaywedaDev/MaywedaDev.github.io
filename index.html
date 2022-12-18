@@ -17,6 +17,9 @@
 				<div class="sm"><h3><i class="fa-solid fa-screwdriver-wrench"></i> M<span>D</span></h3></div>
 			</div>
 			<div class="content">
+				<div class="nav-toggle alt">
+					<div class="inner"></div>
+				</div>
 				<ul>
 					<li class="active"><a href="#">Home</a></li>
 					<li class="product"><a href="#projects">Portfolio</a>
@@ -204,20 +207,6 @@
 			<a href="#" class="btn">Say Hello</a>
 			<h1>Or leave me a message here</h1>
 			<form action="" data-aos="fade-left">
-				<div class="contact">
-					<div class="social">
-						<i class="fa-brands fa-linkedin"></i>
-						<span>Enyo Onuche</span>
-					</div>
-					<div class="social">
-						<i class="fa-brands fa-google"></i>
-						<span>enyoonuche1@gmail.com</span>
-					</div>
-					<div class="social">
-						<i class="fa-brands fa-twitter"></i>
-						<span>playermayweda7</span>
-					</div>
-				</div>
 				<div class="inputs">
 					<div>
 						<label for="">Hello I'm</label>
@@ -259,7 +248,7 @@ var options = {
 var typed = new Typed('.type', options);
 
 // Vanilla JS
-let navtoggle = document.querySelector('.nav-toggle');
+let navtoggle = document.querySelectorAll('.nav-toggle');
 let nav = document.querySelector('.navbar');
 let overlay = document.querySelector('.overlay');
 let scheme = document.querySelector('.scheme');
@@ -287,7 +276,7 @@ function toggleDark(){
 
 var lastScrollTop = 0;
 
-navtoggle.addEventListener('click', openNav);
+navtoggle.forEach(el => el.addEventListener('click', openNav))
 overlay.addEventListener('click', openNav);
 scheme.addEventListener('click', toggleDark);
 window.addEventListener('scroll', () => {

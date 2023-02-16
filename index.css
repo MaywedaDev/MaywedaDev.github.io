@@ -635,9 +635,6 @@ body.dark .projects .featured .preview .imgbox::before{
 	flex-shrink: 1;
 }
 
-.wrks .projects .preview:hover{
-	transform: scale(1.05);
-}
 
 .wrks .projects .preview .details > *{
 	margin-bottom: 15px;
